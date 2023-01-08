@@ -1,0 +1,46 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "Boilerplate for node.js API with Hapi.js framework",
+  "main": "dist/server.js",
+  "scripts": {
+    "copyschema": "copyfiles schema/* schema/**/* dist",
+    "copyquery": "copyfiles query/* query/**/* dist",
+    "copycert": "copyfiles cert.pem dist",
+    "copykey": "copyfiles key.pem dist",
+    "dev:tsc": "tsc --watch -p .",
+    "dev:serve": "nodemon -e js -w dist dist/server.js",
+    "dev": "npm run copyschema && npm run copyquery && npm run copycert && npm run copykey && run-p dev:*",
+    "test": "NODE_ENV=test mocha -r ts-node/register test/**/*.test.ts"
+  },
+  "author": "Alessandro Severa",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/basic": "^7.0.0",
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "^20.2.2",
+    "bcrypt": "^5.0.1",
+    "fs-extra": "^10.1.0",
+    "hapi-auth-bearer-token": "^8.0.0",
+    "is-my-json-valid": "^2.20.6",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.3.0",
+    "moment": "^2.29.4",
+    "mssql": "^9.0.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/hapi__hapi": "^20.0.12",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.16",
+    "chai": "^4.3.6",
+    "copyfiles": "^2.4.1",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3",
+    "uuid": "^9.0.0"
+  }
+}

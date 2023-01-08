@@ -1,0 +1,65 @@
+{
+  "id": "ItaCall.Dto.DtoUser",
+  "type": "object",
+  "properties": {
+    "runtimeType": {
+      "type": "string",
+      "pattern": "DtoUser"
+    },
+    "isNull": {
+      "type": "boolean"
+    },
+    "idAuthority": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "idByAuthority": {
+      "type": "string",
+      "pattern": "^[A-F0-9]{8}(?:-[A-F0-9]{4}){3}-[A-F0-9]{12}$",
+      "maxLength": 50
+    },
+    "givenName": {
+      "type": ["string", "null"]
+    },
+    "familyName": {
+      "type": ["string", "null"]
+    },
+    "username": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "password": {
+      "type": "string",
+      "maxLength": 1024
+    },
+    "assignedCampaignCommaIds": {
+      "type": ["string", "null"]
+    },
+    "assignedActivityCommaIds": {
+      "type": ["string", "null"]
+    },
+    "assignedVendorCommaIds": {
+      "type": ["string", "null"]
+    },
+    "assignedAppointmentsCommaIds": {
+      "type": ["string", "null"]
+    },
+    "role": {
+      "type": "string",
+      "enum": ["Viewer"]
+    }
+  },
+  "required": [
+    "runtimeType",
+    "isNull",
+    "idAuthority",
+    "idByAuthority",
+    "username",
+    "email",
+    "password",
+    "role"
+  ]
+}

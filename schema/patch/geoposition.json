@@ -1,0 +1,31 @@
+{
+  "id": "ItaCall.Dto.DtoGeoPosition",
+  "type": "object",
+  "properties": {
+    "runtimeType": {
+      "type": "string",
+      "pattern": "DtoGeoPosition"
+    },
+    "isNull": {
+      "type": "boolean"
+    },
+    "address": {
+      "type": ["string", "null"]
+    },
+    "appointmentId": {
+      "type": ["number", "null"]
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "runtimeType",
+    "isNull",
+    "latitude",
+    "longitude"
+  ]
+}
